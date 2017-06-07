@@ -1,3 +1,59 @@
 // Main less file for your application.
 // Use `@import` to use other less files
 // relative to 'app/css' or 'vendor/css'.
+
+@main-color: #7BF5FF;
+// #0EEAFF
+
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* /////////////////////////////// GENERAL /////////////////////////////// */
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+/* /////////////////////////////// NAVBAR /////////////////////////////// */
+.navbar.navbar-default {
+  margin: 0;
+  padding: 0;
+}
+
+/* /////////////////////////////// HOMEPAGE /////////////////////////////// */
+.baseline,
+.universe,
+.suggest-register {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.universe {
+  padding: 10rem;
+}
+
+.baseline {
+  text-align: left;
+  background-color: @main-color;
+}
+
+footer {
+  min-height: 20vh;
+  background-color: @main-color;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
