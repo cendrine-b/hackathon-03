@@ -2,8 +2,8 @@
 // Use `@import` to use other less files
 // relative to 'app/css' or 'vendor/css'.
 
-@main-color: #7BF5FF;
-// #0EEAFF
+@main-color: #ECF0F1;
+@sf-color: black;
 
 
 body,
@@ -23,8 +23,40 @@ html {
 
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
 .navbar.navbar-default {
+  border: none;
   margin: 0;
-  padding: 0;
+}
+
+.navbar-default .container-fluid {
+  background-color: @sf-color;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .active .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border: solid 0.1rem white;
+  background-color: @sf-color;
+}
+
+.navbar-header .navbar-brand i {
+  color: white;
+  font-size: 1.2em;
+}
+
+#navbar ul li a {
+  color: white;
+}
+
+#navbar ul .active a,
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+  color: @sf-color;
+  background: white;
 }
 
 /* /////////////////////////////// HOMEPAGE /////////////////////////////// */
@@ -37,6 +69,62 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+.vertical .carousel-inner {
+  height: 100%;
+  min-width: 100vw;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 100%;
+}
+
+.carousel.vertical .prev {
+  top: -100%;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -100%;
+}
+
+.carousel.vertical .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 .universe {
   padding: 10rem;
@@ -56,4 +144,27 @@ footer .footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* /////////////////////////////// REGISTER - FORMULAIRE /////////////////////////////// */
+.register-page {
+  min-height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @sf-color;
+}
+
+.form-content {
+  text-align: left;
+  background-color: white;
+  border: solid 0.5rem white;
+  border-radius: 0.2rem;
+  box-shadow: 5px 5px 20px black;
+  padding: 2rem 6rem;
+}
+
+form h1 {
+  text-align: center;
+  margin: 0 0 2rem;
 }
