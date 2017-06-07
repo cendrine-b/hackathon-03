@@ -4,6 +4,7 @@
 
 @main-color: #7BF5FF;
 // #0EEAFF
+@sf-color: #10113D;
 
 
 body,
@@ -23,8 +24,41 @@ html {
 
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
 .navbar.navbar-default {
+  border: none;
+  border-bottom: solid 0.1rem white;
   margin: 0;
-  padding: 0;
+}
+
+.navbar-default .container-fluid {
+  background-color: @sf-color;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .active .navbar-toggle,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border: solid 0.1rem white;
+  background-color: @sf-color;
+}
+
+.navbar-header .navbar-brand i {
+  color: white;
+  font-size: 1.2em;
+}
+
+#navbar ul li a {
+  color: white;
+}
+
+#navbar ul .active a,
+#navbar ul li a:hover,
+#navbar ul li a:focus {
+  color: @sf-color;
+  background: white;
 }
 
 /* /////////////////////////////// HOMEPAGE /////////////////////////////// */
@@ -56,4 +90,27 @@ footer .footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* /////////////////////////////// REGISTER - FORMULAIRE /////////////////////////////// */
+.register-page {
+  min-height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @sf-color;
+}
+
+.form-content {
+  text-align: left;
+  background-color: white;
+  border: solid 0.5rem white;
+  border-radius: 0.2rem;
+  box-shadow: 5px 5px 20px black;
+  padding: 2rem 6rem;
+}
+
+form h1 {
+  text-align: center;
+  margin: 0 0 2rem;
 }
