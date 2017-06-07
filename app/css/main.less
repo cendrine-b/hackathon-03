@@ -2,9 +2,8 @@
 // Use `@import` to use other less files
 // relative to 'app/css' or 'vendor/css'.
 
-@main-color: #7BF5FF;
-// #0EEAFF
-@sf-color: #10113D;
+@main-color: #ECF0F1;
+@sf-color: black;
 
 
 body,
@@ -25,7 +24,6 @@ html {
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
 .navbar.navbar-default {
   border: none;
-  border-bottom: solid 0.1rem white;
   margin: 0;
 }
 
@@ -71,6 +69,62 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+.vertical .carousel-inner {
+  height: 100%;
+  min-width: 100vw;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 100%;
+}
+
+.carousel.vertical .prev {
+  top: -100%;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -100%;
+}
+
+.carousel.vertical .active.right {
+  top: 100%;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 .universe {
   padding: 10rem;
