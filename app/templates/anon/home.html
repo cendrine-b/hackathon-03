@@ -1,1 +1,115 @@
-<h1>Hello World</h1>
+<div class="container-fluid">
+
+  <section class="baseline">
+    <div class="row">
+      <div class="col-md-offset-6 col-md-4 col-xs-12">
+        <h1>GeekMeet / Geet / Meek, le site de rencontre entre passionné(e)s</h1>
+        <p>Plutôt SF ou Fantasy ? Antiquité grec ou Et en parler Sur GeekMeet / Geet / Meek, échangez autour de votre passion sans (complexe). Besoin d'un partenaire de cosplay ? Seul pour aller à une convention ? Rencontrez d'autres passionnés et organisez-vous
+          sur GeekMeet / Geet / Meek ! Discutez à votre rythme. Partenaires, amis et plus si affinité ;) Duis amet irure voluptate velit laboris nostrud commodo ipsum nostrud mollit est id mollit duis deserunt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="universe">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <h1>Retrouver l'univers qui vous correspond</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <div class="caption">
+            <h2>Historique</h2>
+            <p>Passionné(e)s d'Histoire et d'histoires, de l'Antiquité aux années folles en passant par Napoléon et Churchill, votre communauté vous attend !</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <div class="caption">
+            <h2>Fantasy</h2>
+            <p>Amateurs de Tolkien, mères des dragons, chevaliers d'Avalon, entrez dans le cercle de fée de votre communauté !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <div class="caption">
+            <h2>Manga & anime</h2>
+            <p>De Attack on Titans à Nana, en passant par One Punch Man, Card Captor Sakura & DragonBall, Otaku, vos confrères & consœurs vous attendent !</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <div class="caption">
+            <h2>Science-fiction</h2>
+            <p>Fous de Lovecraft, Philip K. Dick, Star Wars, Marvel ou comic, venez retrouver votre communauté !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="suggest-register">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-xs-12">
+        <h1>Une simple inscription pour rencontrer des centaines de passionné(e)s</h1>
+        <form class="col-md-offset-2 col-md-8 col-xs-12 form" name="registerForm" novalidate ng-submit="register()">
+          <div ng-repeat="error in errors">{{error.error}}</div>
+          <div class="form-group">
+            <input id="pseudo" type="text" class="form-control" required placeholder="Votre pseudo">
+          </div>
+          <div class="form-group">
+            <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
+          </div>
+          <div class="form-group">
+            <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Votre mot de passe">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Je m'inscris</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 col-xs-12 footer-content">
+        <div class="col-xs-4 legal">
+          <h4>Légal</h4>
+          <p>Copyright © 2017 GeekMeet SARL. Tous droits réservés.<br />
+            Conception : Team Atomic.
+          </p>
+        </div>
+        <div class="col-xs-4 social">
+          <h4>Retrouvez-nous sur les réseaux sociaux</h4>
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-youtube-square" aria-hidden="true"></i>
+          <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+        </div>
+        <div class="col-xs-4 partnership">
+          <h4>Partenariat</h4>
+          <div class="row">
+            <img class="col-xs-7 img-responsive" src="../../img/comic-con.png" alt="Comic Con Paris" />
+            <img class="col-xs-5 img-responsive" src="../../img/japan-expo.png" alt="Japan Expo" />
+          </div>
+          <div class="row">
+            <img class="col-xs-6 img-responsive" src="../../img/paris-manga.png" alt="Paris Manga" />
+            <img class="col-xs-6 img-responsive" src="../../img/puydufou.png" alt="Puy du Fou" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
