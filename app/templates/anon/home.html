@@ -2,86 +2,61 @@
 
   <section class="baseline">
     <div class="row">
-      <div class="col-md-offset-6 col-md-4 col-xs-12">
+      <div class="col-xs-12">
         <h1>Rencontrer</h1>
-        <h2>Votre</h2>
-
-
-
-
-        <div id="myCarousel" class="carousel slide vertical">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-                <div class="active item">
-                  <h2>ami</h2>
-                </div>
-                <div class="item">
-                  <h2>âme-sœur</h2>
-                </div>
-                <div class="item">
-                  <h2>amant</h2>
-                </div>
-                <div class="item">
-                  <h2>u-bot</h2>
-                </div>
+      </div>
+      <div class="col-md-offset-3 col-md-6 col-xs-12">
+        <h2>votre ami</h2>
+        <h2>votre âme-sœur</h2>
+        <h2>votre amant</h2>
+        <h2>votre hu-bot</h2>
+        <!-- <div class="row">
+          <div class="col-xs-6">
+            <h2>Votre</h2>
+          </div>
+          <div class="col-xs-6">
+            <div class="carousel slide vertical" id="carousel-vertical" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-vertical" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-vertical" data-slide-to="1"></li>
+                <li data-target="#carousel-vertical" data-slide-to="2"></li>
+                <li data-target="#carousel-vertical" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active"><h2>ami</h2></div>
+                <div class="item"><h2>âme-sœur</h2></div>
+                <div class="item"><h2>amant</h2></div>
+                <div class="item"><h2>hu-bot</h2></div>
+              </div>
             </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-        </div>
-
-
-
-
-
-
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
 
-  <section class="universe">
-    <div class="row">
+  <section class="products">
+    <div class="row products-title">
       <div class="col-md-offset-2 col-md-8 col-xs-12">
-        <h1>Retrouver l'univers qui vous correspond</h1>
+        <h1>hu-bot</h1>
+      </div>
+      <div class="col-xs-12">
+        <h3>L'intelligence artificielle par Android<sup>®</sup></h3>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-xs-12">
-        <div class="thumbnail">
-          <img class="img-responsive" src="img/history.jpg" alt="cleopatra">
-          <div class="caption">
-            <h2>Historique</h2>
-            <p>Passionné(e)s d'Histoire et d'histoires, de l'Antiquité aux années folles en passant par Napoléon et Churchill, votre communauté vous attend !</p>
-          </div>
+      <div class="col-xs-12">
+        <div class="col-md-4 col-xs-12">
+          <h2>Deus</h2>
+          <h4>L'éclat et le charme de l'Olympe.</h4>
         </div>
-      </div>
-      <div class="col-md-6 col-xs-12">
-        <div class="thumbnail">
-          <img class="img-responsive" src="img/tolkienCastel.jpg" alt="tolkienCastel">
-          <div class="caption">
-            <h2>Fantasy</h2>
-            <p>Amateurs de Tolkien, mères des dragons, chevaliers d'Avalon, entrez dans le cercle de fée de votre communauté !</p>
-          </div>
+        <div class="col-md-4 col-xs-12">
+          <h2>Sidereal</h2>
+          <h4>Une perfection presque intouchable.</h4>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        <div class="thumbnail">
-          <img class="img-responsive"src="img/manga.jpg" alt="manga">
-          <div class="caption">
-            <h2>Manga & anime</h2>
-            <p>De Attack on Titans à Nana, en passant par One Punch Man, Card Captor Sakura & DragonBall, Otaku, vos confrères & consœurs vous attendent !</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12">
-        <div class="thumbnail">
-          <img class="img-responsive"src="img/spacialShip.jpg" alt="spacialShip">
-          <div class="caption">
-            <h2>Science-fiction</h2>
-            <p>Fous de Lovecraft, Philip K. Dick, Star Wars, Marvel ou comic, venez retrouver votre communauté !</p>
-          </div>
+        <div class="col-md-4 col-xs-12">
+          <h2>Beauty</h2>
+          <h4>L'élégance de la simplicité.</h4>
         </div>
       </div>
     </div>
@@ -89,52 +64,31 @@
 
   <section class="suggest-register">
     <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-xs-12">
-        <h1>Une simple inscription pour rencontrer des centaines de passionné(e)s</h1>
-        <form class="col-md-offset-2 col-md-8 col-xs-12 form" name="registerForm" novalidate ng-submit="register()">
-          <div ng-repeat="error in errors">{{error.error}}</div>
-          <div class="form-group">
-            <input id="pseudo" type="text" class="form-control" required placeholder="Votre pseudo">
-          </div>
-          <div class="form-group">
-            <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
-          </div>
-          <div class="form-group">
-            <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Votre mot de passe">
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg">Je m'inscris</button>
-        </form>
+      <div class="col-xs-12">
+        <h1>Rencontrez<br />votre hu-bot</h1>
+      </div>
+      <div class="col-xs-12">
+        <button class="btn btn-primary btn-lg" type="button" name="button">
+          <h2>Inscrivez-vous</h2>
+        </button>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-xs-12 footer-content">
-        <div class="col-xs-4 legal">
-          <h4>Légal</h4>
-          <p>Copyright © 2017 GeekMeet SARL. Tous droits réservés.<br />
-            Conception : Team Atomic.
-          </p>
+      <div class="col-xs-12 footer-content">
+        <div class="col-xs-6 legal">
+          <p>Copyright © 2017 Android. Tous droits réservés.<br />
+          Conception : Team Atomic.
+        </p>
         </div>
-        <div class="col-xs-4 social">
-          <h4>Retrouvez-nous sur les réseaux sociaux</h4>
+        <div class="col-xs-6 social">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+          <i class="fa fa-youtube-square" aria-hidden="true"></i>
           <i class="fa fa-facebook-official" aria-hidden="true"></i>
           <i class="fa fa-twitter-square" aria-hidden="true"></i>
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <i class="fa fa-youtube-square" aria-hidden="true"></i>
-          <i class="fa fa-google-plus-square" aria-hidden="true"></i>
-        </div>
-        <div class="col-xs-4 partnership">
-          <h4>Partenariat</h4>
-          <div class="row">
-            <img class="col-xs-7 img-responsive" src="../../img/comic-con.png" alt="Comic Con Paris" />
-            <img class="col-xs-5 img-responsive" src="../../img/japan-expo.png" alt="Japan Expo" />
-          </div>
-          <div class="row">
-            <img class="col-xs-6 img-responsive" src="../../img/paris-manga.png" alt="Paris Manga" />
-            <img class="col-xs-6 img-responsive" src="../../img/puydufou.png" alt="Puy du Fou" />
-          </div>
         </div>
       </div>
     </div>
