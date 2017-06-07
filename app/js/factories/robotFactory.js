@@ -122,5 +122,6 @@ angular.module('app')
         quality: "Mystérieux",
         fault: "Silencieux",
       },
-      ]
+    ];
+      return robots:
     });
