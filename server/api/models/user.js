@@ -9,11 +9,11 @@ const hashCode = (s) => s.split("").reduce((a, b) => {
 }, 0);
 
 const userSchema = new mongoose.Schema({
-    pseudo: {
+    firstname: {
       type: String
     },
-    age: {
-      type: Number
+    lastname: {
+      type: String
     },
     email: {
         type: String,
@@ -29,37 +29,36 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     me: {
-      myUniverse: {
+      gender: {
         type: String
       },
-      myCommunity: {
+      species: {
         type: String
       },
-      myCharacter: {
-        type: String
-      },
-      myAvatar: {
-        type: String
-      },
-      myCosplay: {
-        type: Boolean,
-        default: true
-      },
-      myConv: {
+      personality: {
         type: String
       },
     },
     searching: {
-      cosplay: {
-        type: Boolean
-      },
-      conv: {
+      gender: {
         type: String
       },
-      character: {
+      product: {
         type: String
       },
-      searchText: {
+      eyes: {
+        type: String
+      },
+      hair: {
+        type: String
+      },
+      personality: {
+        type: String
+      },
+      quality: {
+        type: String
+      },
+      fault: {
         type: String
       },
     },
