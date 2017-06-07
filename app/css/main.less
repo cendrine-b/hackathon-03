@@ -3,6 +3,7 @@
 // relative to 'app/css' or 'vendor/css'.
 
 @main-color: #ECF0F1;
+@second-color: #6C7A89;
 @sf-color: black;
 
 
@@ -19,6 +20,28 @@ html {
 .container-fluid {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5.5rem;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0 0 0.7rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
@@ -61,7 +84,7 @@ html {
 
 /* /////////////////////////////// HOMEPAGE /////////////////////////////// */
 .baseline,
-.universe,
+.products,
 .suggest-register {
   min-height: 100vh;
   display: flex;
@@ -70,80 +93,129 @@ html {
   align-items: center;
 }
 
-
-
-
-
-.vertical .carousel-inner {
-  height: 100%;
-  min-width: 100vw;
-}
-
-.carousel.vertical .item {
-  -webkit-transition: 0.6s ease-in-out top;
-     -moz-transition: 0.6s ease-in-out top;
-      -ms-transition: 0.6s ease-in-out top;
-       -o-transition: 0.6s ease-in-out top;
-          transition: 0.6s ease-in-out top;
-}
-
-.carousel.vertical .active {
-  top: 0;
-}
-
-.carousel.vertical .next {
-  top: 100%;
-}
-
-.carousel.vertical .prev {
-  top: -100%;
-}
-
-.carousel.vertical .next.left,
-.carousel.vertical .prev.right {
-  top: 0;
-}
-
-.carousel.vertical .active.left {
-  top: -100%;
-}
-
-.carousel.vertical .active.right {
-  top: 100%;
-}
-
-.carousel.vertical .item {
-    left: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-.universe {
-  padding: 10rem;
-}
-
 .baseline {
-  text-align: left;
   background-color: @main-color;
 }
+
+.products-title {
+  margin-bottom: 6rem;
+}
+
+.suggest-register button {
+  margin-top: 2rem;
+  color: white;
+  background-color: @second-color;
+  border: solid 0.4rem @second-color;
+  box-shadow: none;
+}
+
+.suggest-register button:active,
+.suggest-register button:focus,
+.suggest-register button:hover {
+  color: @second-color;
+  background-color: white;
+  border: solid 0.4rem @second-color;
+}
+
+
+// .carousel.vertical .carousel-inner {
+//   height: 100%;
+// }
+// .carousel.vertical .carousel-inner > .item {
+//   -webkit-transition: 0.4s ease-in-out top;
+//   -o-transition: 0.4s ease-in-out top;
+//   transition: 0.4s ease-in-out top;
+// }
+// @media all and (transform-3d), (-webkit-transform-3d) {
+// .carousel.vertical .carousel-inner > .item {
+//     -webkit-transition: -webkit-transform 0.4s ease-in-out;
+//     -ms-transition: -ms-transform 0.4s ease-in-out;
+//     -o-transition: -o-transform 0.4s ease-in-out;
+//     transition: transform 0.4s ease-in-out;
+//     -ms-backface-visibility: hidden;
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+//     -ms-perspective: 1000;
+//     -webkit-perspective: 1000;
+//     perspective: 1000;
+//   }
+// .carousel.vertical .carousel-inner > .item.next,
+// .carousel.vertical .carousel-inner > .item.active.right {
+//     top: 0;
+//     -ms-transform: translate3d(0, 100%, 0);
+//     -webkit-transform: translate3d(0, 100%, 0);
+//     transform: translate3d(0, 100%, 0);
+//   }
+// .carousel.vertical .carousel-inner > .item.prev,
+// .carousel.vertical .carousel-inner > .item.active.left {
+//     top: 0;
+//     -ms-transform: translate3d(0, -100%, 0);
+//     -webkit-transform: translate3d(0, -100%, 0);
+//     transform: translate3d(0, -100%, 0);
+//   }
+// .carousel.vertical .carousel-inner > .item.next.left,
+// .carousel.vertical .carousel-inner > .item.prev.right,
+// .carousel.vertical .carousel-inner > .item.active {
+//     top: 0;
+//     -ms-transform: translate3d(0, 0, 0);
+//     -webkit-transform: translate3d(0, 0, 0);
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+// .carousel.vertical .carousel-inner > .active {
+//   top: 0;
+// }
+// .carousel.vertical .carousel-inner > .next,
+// .carousel.vertical .carousel-inner > .prev {
+//   top: 0;
+//   height: 100%;
+//   width: 100%;
+// }
+// .carousel.vertical .carousel-inner > .next {
+//   left: 0;
+//   top: 100%;
+// }
+// .carousel.vertical .carousel-inner > .prev {
+//   left: 0;
+//   top: -100%
+// }
+// .carousel.vertical .carousel-inner > .next.left,
+// .carousel.vertical .carousel-inner > .prev.right {
+//   top: 0;
+// }
+// .carousel.vertical .carousel-inner > .active.left {
+//   left: 0;
+//   top: -100%;
+// }
+// .carousel.vertical .carousel-inner > .active.right {
+//   left: 0;
+//   top: 100%;
+// }
+
+
+
+
+
+
 
 footer {
-  min-height: 20vh;
   background-color: @main-color;
 }
 
-footer .footer-content {
+.footer-content {
+  min-height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.legal p {
+  font-size: 0.8rem;
+}
+
+.social i {
+  font-size: 2rem;
+  margin: 0 0.4rem;
 }
 
 /* /////////////////////////////// REGISTER - FORMULAIRE /////////////////////////////// */
