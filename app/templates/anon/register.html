@@ -1,16 +1,28 @@
-<div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-        <form class="form" name="loginForm" novalidate ng-submit="register()">
-            <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form>
-    </div>
+<div class="row register-page">
+  <div class="col-md-6 col-xs-12 form-content">
+
+    <form class="form" name="registerForm" novalidate ng-submit="register()">
+      <h1>Inscription</h1>
+      <div ng-repeat="error in errors">{{error.error}}</div>
+      <div class="form-group">
+        <label>Pseudo</label>
+        <input id="pseudo" type="text" class="form-control" required placeholder="Votre pseudo">
+      </div>
+      <div class="form-group">
+        <label>Âge</label>
+        <input id="age" type="number" class="form-control" required placeholder="Votre âge">
+      </div>
+      <div class="form-group">
+        <label>Adresse e-mail</label>
+        <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Définissez un mot de passe">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Je m'inscris</button>
+      <small class="form-text text-muted">Nous ne transmettrons jamais vos informations personnelles à des tiers.</small>
+    </form>
+
+  </div>
 </div>
