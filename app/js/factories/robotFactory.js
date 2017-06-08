@@ -16,7 +16,7 @@ angular.module('app')
         name: "Alix",
         gender: "Neutre",
         product: "Beauty",
-        eyes: "Bleu",
+        eyes: "Bleue",
         hair: "Brun",
         personality: "Romantique",
         quality: "Rêveur",
