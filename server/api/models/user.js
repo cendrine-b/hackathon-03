@@ -38,6 +38,9 @@ const userSchema = new mongoose.Schema({
       personality: {
         type: String
       },
+      photo: {
+        type: String
+      },
     },
     searching: {
       gender: {
@@ -59,6 +62,9 @@ const userSchema = new mongoose.Schema({
         type: String
       },
       fault: {
+        type: String
+      },
+      price: {
         type: String
       },
     },
