@@ -1,16 +1,22 @@
-<div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
+<div class="row login-page">
+    <div class="col-md-offset-3 col-md-6 col-xs-12 login-content">
         <form class="form" name="loginForm" novalidate ng-submit="login()">
+
+            <h2>Connexion</h2>
+
+            <div class="form-group">
+              <label>Adresse e-mail</label>
+              <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
+            </div>
+
+            <div class="form-group">
+              <label>Mot de passe</label>
+              <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Votre mot de passe">
+            </div>
+
             <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+            <input type="submit" placeholder="Valider" class="col-md-offset-4 col-md-4 col-xs-12 btn btn-primary btn-lg register-btn">
         </form>
     </div>
 </div>
