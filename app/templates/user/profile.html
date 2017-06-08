@@ -88,7 +88,55 @@
       <div class="modal-content">
         <div class="modal-header">
           <h2>Retrouvez votre hu-bot</h2>
-          
+          <!--<div ng-message="required">Champ requis</div>
+          <div ng-message="minlength">Valeur trop courte</div>
+          <div ng-messages="maxlength">Valeur trop longue</div>
+          <div ng-message="email">E-mail non valide</div>
+          <div ng-message="number">Caractères alphabétiques non autorisés</div
+          >-->
+    <form name="myForm" ng-submit="foo()" novalidate>
+      <label>Prénom : </label>
+      <input name="prenom" type="text" required ng-minlength="2" ng-maxlength="20" />
+      <div ng-messages="myForm.prenom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Nom : </label>
+      <input name="nom" type="text" ng-maxlength="30" />
+      <div ng-messages="myForm.nom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>E-mail : </label>
+      <input name="mail" type="email" required />
+      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Adresse de livraison : </label>
+      <input name="adresse" type="text" required ng-minlength="2" ng-maxlength="50" />
+      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Code postal : </label>
+      <input name="code postal" type="number" required />
+      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Téléphone : </label>
+      <input name="telephone" type="number" required />
+      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>N° de carte bancaire (16 chiffres) : </label>
+      <input name="numero cb" type="number" required />
+      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Cryptogramme (3 derniers chiffres au dos de la carte) : </label>
+      <input name="cryptogramme" type="number" required />
+      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <label>Date de validité : </label>
+      <input name="date validité" type="number" required />
+      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
+      <input type="submit" value="Valider" />
+    </form>
+
+
+
+
         </div>
       </div>
     </div>
