@@ -123,5 +123,5 @@ angular.module('app')
         fault: "Silencieux",
       },
     ];
-      return robots:
+      return robots;
     });
