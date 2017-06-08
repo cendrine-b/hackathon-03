@@ -69,12 +69,26 @@
           </button>
           <h2>Espace de discussion</h2>
           <h4>Vous l'avez désiré & choisi, discutez avec votre hu-bot.</h4>
-          <input id="chat" type="text" ng-model="query"/>
-          <!-- onkeydown="if (event.keyCode == 13){ document.getElementById('enter').click();}" -->
-          <button id="enter" type="submit" ng-click="chatting()">Valider</button>
-          <div id="white" class="col-md-offset-2 col-md-8 col-xs-12">
-            <p id="chatarea"></p>
-          </div>
+          <form class="col-md-offset-2 col-md-8 col-xs-12 form-group">
+            <input class="form-control text" ng-model="query"/>
+            <button class="btn btn-default" ng-click="addChat()">Valider</button>
+          </form>
+          <ul class="col-md-offset-2 col-md-8 col-xs-12 list-group">
+            <li class="list-group-item" ng-repeat="chat in chats">
+              <strong>{{ user.lastname }} :</strong> {{ chat.value }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="open-buy" class="modal fade robot-content-buy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Retrouvez votre hu-bot</h2>
+          
         </div>
       </div>
     </div>
