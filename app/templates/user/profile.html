@@ -1,5 +1,3 @@
-<!-- CHARACTER SELECTION -->
-
 <section class="my-profil">
   <div class="col-xs-12">
     <div class="col-md-offset-2 col-md-2 col-xs-12">
@@ -21,57 +19,65 @@
   </div>
 </section>
 
-<section class="perso" ng-repeat="robot in robotList | limitTo : 5">
-  <ul>
-    <li style="background: url('../../img/{{ robot.name }}.jpg') no-repeat center center;">
-      <p>{{ robot.name }}<span></span></p>
+<section class="perso" ng-repeat="robot in robotList | limitTo : 4">
+  <ul class="list-perso">
+    <li class="col-md-3 col-xs-12" data-toggle="modal" data-target="#{{ robot.name }}" style="background: url('../../img/{{ robot.name }}.jpg') no-repeat center center;">
+      <p>{{ robot.name }}</p>
     </li>
   </ul>
-</section>
-
-<article class="robot" ng-repeat="robot in robotList | limitTo : 5" style="background: url('../../img/{{ robot.name }}.jpg') no-repeat top center;">
-  <span class="close">x</span>
-  <div class="text-wrap">
-    <h2>{{ robot.name }}</h2>
-    <p>{{ robot.description }}</p>
-    <ul>
-      <li><strong>Genre :</strong> {{ robot.gender }}</li>
-      <li><strong>Modèle :</strong> {{ robot.product }}</li>
-      <li><strong>Yeux :</strong> {{ robot.eyes }}</li>
-      <li><strong>Cheveux :</strong> {{ robot.hair }}</li>
-      <li><strong>Caractère :</strong> {{ robot.personality }}</li>
-      <li><strong>Autonomie :</strong> {{ robot.autonomy }}</li>
-      <li><strong>Taille :</strong> {{ robot.height }}</li>
-      <li><strong>Poids :</strong> {{ robot.weight }}</li>
-      <li><strong>Technologie :</strong> {{ robot.technology }}</li>
-      <li><strong>Tarif :</strong> {{ robot.priceSpe }}</li>
-    </ul>
-    <button type="" name="button" data-toggle="modal" data-target="#open-chat"><i class="fa fa-heart" aria-hidden="true"></i></button>
-  </div>
-</article>
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div id="open-chat" class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <h1>Welcome my chat. Talk to me!</h1>
-      <p>Ask any question to get to know more about me!</p>
-      <input id="chat" type="text" onkeydown="if (event.keyCode == 13){ document.getElementById('enter').click();}" />
-      <button id="enter" type="submit" onclick="chatting()">Enter</button>
-      <div id="white">
-        <p id="chatarea"></p>
+  <div id="{{ robot.name }}" class="modal fade robot-content" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="row modal-robot">
+          <div class="col-md-6 col-xs-12">
+            <img class="img-responsive robot-img" src="../../img/{{ robot.name }}.jpg" alt="{{ robot.name }}">
+          </div>
+          <div class="col-md-6 col-xs-12 robot-text">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="col-md-11 col-xs-12 text-wrap">
+              <h2>{{ robot.name }}</h2>
+              <p>{{ robot.description }}</p>
+              <ul>
+                <li><strong>Genre :</strong> {{ robot.gender }}</li>
+                <li><strong>Modèle :</strong> {{ robot.product }}</li>
+                <li><strong>Yeux :</strong> {{ robot.eyes }}</li>
+                <li><strong>Cheveux :</strong> {{ robot.hair }}</li>
+                <li><strong>Caractère :</strong> {{ robot.personality }}</li>
+                <li><strong>Autonomie :</strong> {{ robot.autonomy }}</li>
+                <li><strong>Taille :</strong> {{ robot.height }}</li>
+                <li><strong>Poids :</strong> {{ robot.weight }}</li>
+                <li><strong>Technologie :</strong> {{ robot.technology }}</li>
+                <li><strong>Tarif :</strong> {{ robot.priceSpe }}</li>
+              </ul>
+              <button class="btn btn-default btn-lg robot-like" type="" name="button" data-toggle="modal" ng-click="goChat()"><i class="fa fa-heart" aria-hidden="true"></i></button>
+              <button class="btn btn-default btn-lg robot-buy" type="" name="button" data-toggle="modal" ng-click="goBuy()"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <div id="open-chat" class="modal fade robot-content-chat" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2>Espace de discussion</h2>
+          <h4>Vous l'avez désiré & choisi, discutez avec votre hu-bot.</h4>
+          <input id="chat" type="text" ng-model="query"/>
+          <!-- onkeydown="if (event.keyCode == 13){ document.getElementById('enter').click();}" -->
+          <button id="enter" type="submit" ng-click="chatting()">Valider</button>
+          <div id="white" class="col-md-offset-2 col-md-8 col-xs-12">
+            <p id="chatarea"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
-    <defs>
-      <filter id="blur">
-          <feGaussianBlur id="blur-filter" in="SourceGraphic" stdDeviation="6,0" /><!--Here you can change the value-->
-      </filter>
-  </defs>
-</svg>
+</section>
