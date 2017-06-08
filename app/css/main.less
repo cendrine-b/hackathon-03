@@ -4,13 +4,14 @@
 
 @main-color: #ECF0F1;
 @second-color: #6C7A89;
-@sf-color: black;
+@dark-color: black;
 
 
 body,
 html {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
+  color: black;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@ html {
 
 h1 {
   font-size: 5rem;
+  font-weight: 300;
   line-height: 5.5rem;
   text-transform: uppercase;
   margin: 0 0 1rem;
@@ -31,27 +33,36 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  font-weight: 300;
   margin: 0 0 0.7rem;
 }
 
 h3 {
   font-size: 2rem;
+  font-weight: 300;
   margin: 0.5rem 0 0;
 }
 
 h4 {
   font-size: 1.5rem;
+  font-weight: 300;
   margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
 .navbar.navbar-default {
   border: none;
+  box-shadow: 1px 0px 3px black;
   margin: 0;
 }
 
 .navbar-default .container-fluid {
-  background-color: @sf-color;
+  background-color: @dark-color;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -62,8 +73,8 @@ h4 {
 .navbar-default .active .navbar-toggle,
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  border: solid 0.1rem white;
-  background-color: @sf-color;
+  border: solid 0.05rem white;
+  background-color: @dark-color;
 }
 
 .navbar-header .navbar-brand i {
@@ -78,7 +89,7 @@ h4 {
 #navbar ul .active a,
 #navbar ul li a:hover,
 #navbar ul li a:focus {
-  color: @sf-color;
+  color: @dark-color;
   background: white;
 }
 
@@ -97,15 +108,21 @@ h4 {
   background-color: @main-color;
 }
 
+.products {
+  background: url("../img/eyes.jpg") fixed no-repeat center center;
+}
+
 .products-title {
   margin-bottom: 6rem;
 }
 
 .suggest-register button {
   margin-top: 2rem;
-  color: white;
-  background-color: @second-color;
-  border: solid 0.4rem @second-color;
+  color: @dark-color;
+  background-color: white;
+  border: none;
+  border-bottom: solid 0.2rem @dark-color;
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -114,89 +131,8 @@ h4 {
 .suggest-register button:hover {
   color: @second-color;
   background-color: white;
-  border: solid 0.4rem @second-color;
+  border-bottom: solid 0.2rem @second-color;
 }
-
-
-// .carousel.vertical .carousel-inner {
-//   height: 100%;
-// }
-// .carousel.vertical .carousel-inner > .item {
-//   -webkit-transition: 0.4s ease-in-out top;
-//   -o-transition: 0.4s ease-in-out top;
-//   transition: 0.4s ease-in-out top;
-// }
-// @media all and (transform-3d), (-webkit-transform-3d) {
-// .carousel.vertical .carousel-inner > .item {
-//     -webkit-transition: -webkit-transform 0.4s ease-in-out;
-//     -ms-transition: -ms-transform 0.4s ease-in-out;
-//     -o-transition: -o-transform 0.4s ease-in-out;
-//     transition: transform 0.4s ease-in-out;
-//     -ms-backface-visibility: hidden;
-//     -webkit-backface-visibility: hidden;
-//     backface-visibility: hidden;
-//     -ms-perspective: 1000;
-//     -webkit-perspective: 1000;
-//     perspective: 1000;
-//   }
-// .carousel.vertical .carousel-inner > .item.next,
-// .carousel.vertical .carousel-inner > .item.active.right {
-//     top: 0;
-//     -ms-transform: translate3d(0, 100%, 0);
-//     -webkit-transform: translate3d(0, 100%, 0);
-//     transform: translate3d(0, 100%, 0);
-//   }
-// .carousel.vertical .carousel-inner > .item.prev,
-// .carousel.vertical .carousel-inner > .item.active.left {
-//     top: 0;
-//     -ms-transform: translate3d(0, -100%, 0);
-//     -webkit-transform: translate3d(0, -100%, 0);
-//     transform: translate3d(0, -100%, 0);
-//   }
-// .carousel.vertical .carousel-inner > .item.next.left,
-// .carousel.vertical .carousel-inner > .item.prev.right,
-// .carousel.vertical .carousel-inner > .item.active {
-//     top: 0;
-//     -ms-transform: translate3d(0, 0, 0);
-//     -webkit-transform: translate3d(0, 0, 0);
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-// .carousel.vertical .carousel-inner > .active {
-//   top: 0;
-// }
-// .carousel.vertical .carousel-inner > .next,
-// .carousel.vertical .carousel-inner > .prev {
-//   top: 0;
-//   height: 100%;
-//   width: 100%;
-// }
-// .carousel.vertical .carousel-inner > .next {
-//   left: 0;
-//   top: 100%;
-// }
-// .carousel.vertical .carousel-inner > .prev {
-//   left: 0;
-//   top: -100%
-// }
-// .carousel.vertical .carousel-inner > .next.left,
-// .carousel.vertical .carousel-inner > .prev.right {
-//   top: 0;
-// }
-// .carousel.vertical .carousel-inner > .active.left {
-//   left: 0;
-//   top: -100%;
-// }
-// .carousel.vertical .carousel-inner > .active.right {
-//   left: 0;
-//   top: 100%;
-// }
-
-
-
-
-
-
 
 footer {
   background-color: @main-color;
@@ -215,16 +151,16 @@ footer {
 
 .social i {
   font-size: 2rem;
+  color: black;
   margin: 0 0.4rem;
 }
 
 /* /////////////////////////////// REGISTER - FORMULAIRE /////////////////////////////// */
 .register-page {
-  min-height: 93vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: @sf-color;
 }
 
 .form-content {
