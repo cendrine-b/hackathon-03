@@ -157,24 +157,73 @@ footer {
 
 /* /////////////////////////////// REGISTER - FORMULAIRE /////////////////////////////// */
 .register-page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 5rem;
 }
 
 .form-content {
   text-align: left;
-  background-color: white;
-  border: solid 0.5rem white;
-  border-radius: 0.2rem;
-  box-shadow: 5px 5px 20px black;
-  padding: 2rem 6rem;
 }
 
-form h1 {
+form h2 {
   text-align: center;
   margin: 0 0 2rem;
+}
+
+form .body {
+  margin: 0 0 2rem;
+}
+
+form .soul {
+  margin: 3rem 0 2rem;
+}
+
+hr {
+  height: 1px;
+  background-color: @second-color;
+  margin: 2rem 0;
+}
+
+.register-btn {
+  margin-top: 2rem;
+  color: white;
+  background-color: @dark-color;
+  border: solid 0.2rem @dark-color;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.register-btn:active,
+.register-btn:focus,
+.register-btn:hover {
+  background-color: @second-color;
+  border: solid 0.2rem @second-color;
+}
+
+.custom-btn {
+  margin-top: 2rem;
+  color: @dark-color;
+  background-color: white;
+  border: none;
+  border-bottom: solid 0.2rem @dark-color;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.custom-btn:active,
+.custom-btn:focus,
+.custom-btn:hover {
+  color: @second-color;
+  background-color: white;
+  border-bottom: solid 0.2rem @second-color;
+}
+
+.register-btn h3 {
+  margin: 0;
+}
+
+.text-muted {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 
@@ -435,4 +484,3 @@ svg {
     filter: none;
     -webkit-filter: none;
   }
-}
