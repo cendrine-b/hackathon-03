@@ -95,6 +95,11 @@
           <div ng-message="number">Caractères alphabétiques non autorisés</div
           >-->
     <form name="myForm" ng-submit="foo()" novalidate>
+
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
       <label>Prénom : </label>
       <input name="prenom" type="text" required ng-minlength="2" ng-maxlength="20" />
       <div ng-messages="myForm.prenom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
@@ -119,6 +124,10 @@
       <input name="telephone" type="number" required />
       <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
 
+      <label>Nom carte bancaire : </label>
+      <input name="carte bancaire" type="text" required ng-minlength="2" ng-maxlength="50" />
+      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
+
       <label>N° de carte bancaire (16 chiffres) : </label>
       <input name="numero cb" type="number" required />
       <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
@@ -134,12 +143,8 @@
       <input type="submit" value="Valider" />
     </form>
 
-
-
-
         </div>
       </div>
     </div>
   </div>
-
 </section>
