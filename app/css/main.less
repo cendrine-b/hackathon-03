@@ -49,6 +49,13 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
 p {
   font-size: 1rem;
   font-weight: 400;
@@ -254,29 +261,66 @@ hr {
 
 
 
+/* /////////////////////////////// PROFILE - MY PROFILE /////////////////////////////// */
 
+.my-profil {
+  margin: 3rem 0 0;
+}
 
+.my-profil img {
+  margin: 0 0 6rem;
+  filter: grayscale(1);
+}
+
+.my-profil {
+  text-align: left;
+}
+
+.my-profil h4 {
+  margin-bottom: 1.5rem;
+}
+
+.change-btn {
+  margin: 0;
+  padding: 0.2rem 0.4rem;
+  color: @dark-color;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.change-btn:active,
+.change-btn:focus,
+.change-btn:hover {
+  color: @second-color;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  box-shadow: 1px 1px 5px @second-color;
+}
 
 
 /* /////////////////////////////// PROFILE - PHOTOS ROBOTS /////////////////////////////// */
 
-
-.perso ul{
+.perso ul {
   width: 100%;
   height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .perso ul li {
   float:left;
   width: calc(100% / 5);
-  background: #fff;
-  height: 100%;
+  background: @second-color;
+  height: 100vh;
   box-shadow: 0 0 100px rgba(0,0,0,0.8) inset;
   position: relative;
   cursor:pointer;
   background-size: cover !important;
-  transition:0.7s all ease-in-out;
-  -webkit-transition:0.7s all ease-in-out;
+  transition: 0.7s all ease-in-out;
+  -webkit-transition: 0.7s all ease-in-out;
 }
 
 .perso ul li.adapt {
@@ -367,26 +411,6 @@ hr {
   -webkit-transition:0.4s all ease-out 0.8s;
 }
 
-.perso ul li:nth-of-type(1) {
-  background: url("../img/alix.jpg") no-repeat center center;
-}
-
-.perso ul li:nth-of-type(2) {
-  background: url("../img/calia.jpg") no-repeat center center;
-}
-
-.perso ul li:nth-of-type(3) {
-  background: url("../img/ryo.jpg") no-repeat center center;
-}
-.perso ul li:nth-of-type(4) {
-  background: url("../img/anto.jpg") no-repeat center center;
-  background-size: cover;
-}
-.perso ul li:nth-of-type(5) {
-  background: url("../img/liar.jpg") no-repeat center center;
-}
-
-
 article {
   display:none;
   position: absolute;
@@ -397,24 +421,24 @@ article {
   z-index: 2;
 }
 
-article:nth-of-type(1) {
-  background: url("../img/alix.jpg") no-repeat top center;
-}
-
-article:nth-of-type(2) {
-  background: url("../img/calia.jpg") no-repeat top center;
-}
-
-article:nth-of-type(3) {
-  background: url("../img/ryo.jpg") no-repeat top center;
-}
-article:nth-of-type(4) {
-  background: url("../img/anto.jpg") no-repeat top center;
-  background-size: cover;
-}
-article:nth-of-type(5) {
-  background: url("../img/liar.jpg") no-repeat top center;
-}
+// article:nth-of-type(1) {
+//   background: url("../img/alix.jpg") no-repeat top center;
+// }
+//
+// article:nth-of-type(2) {
+//   background: url("../img/calia.jpg") no-repeat top center;
+// }
+//
+// article:nth-of-type(3) {
+//   background: url("../img/ryo.jpg") no-repeat top center;
+// }
+// article:nth-of-type(4) {
+//   background: url("../img/anto.jpg") no-repeat top center;
+//   background-size: cover;
+// }
+// article:nth-of-type(5) {
+//   background: url("../img/liar.jpg") no-repeat top center;
+// }
 
 article .text-wrap {
   position: absolute;
