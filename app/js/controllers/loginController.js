@@ -2,6 +2,8 @@ angular.module('app')
     .controller('LoginController', function($scope, $state, Auth) {
         $scope.errors = [];
 
+        console.log($scope.user);
+
         $scope.login = function() {
             if ($scope.loginForm.$valid) {
                 $scope.errors = [];

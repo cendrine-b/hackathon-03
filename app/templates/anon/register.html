@@ -1,7 +1,7 @@
 <div class="row register-page">
-  <div class="col-md-offset-3 col-md-6 col-xs-12 form-content">
+  <div class="col-md-offset-3 col-md-6 col-xs-12 form-content" ng-submit="register()">
 
-    <form class="form" name="registerForm" novalidate ng-submit="register()">
+    <form class="form" name="registerForm" novalidate>
       <h2>Inscription</h2>
       <div ng-repeat="error in errors">{{error.error}}</div>
 
@@ -145,7 +145,7 @@
       </div>
     </form>
 
-    <button type="" class="col-md-4 col-xs-12 btn btn-primary btn-lg custom-btn"><h4>Customize</h4></button>
+    <button class="col-md-4 col-xs-12 btn btn-primary btn-lg custom-btn"><h4>Customize</h4></button>
     <button type="submit" class="col-md-offset-5 col-md-3 col-xs-12 btn btn-primary btn-lg register-btn"><h4>Valider</h4></button>
     <div class="row">
       <small class="col-xs-12 form-text text-muted">Nous ne transmettrons jamais vos informations personnelles à des tiers ou des robots.</small>
