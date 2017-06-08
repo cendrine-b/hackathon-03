@@ -1,33 +1,36 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'run', 'server' ]
-2 info using npm@3.10.10
-3 info using node@v6.10.3
+1 verbose cli [ '/usr/local/Cellar/node/7.7.2/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'server' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.2
 4 verbose run-script [ 'preserver', 'server', 'postserver' ]
 5 info lifecycle mean-lineman@1.0.0~preserver: mean-lineman@1.0.0
 6 silly lifecycle mean-lineman@1.0.0~preserver: no script for preserver, continuing
 7 info lifecycle mean-lineman@1.0.0~server: mean-lineman@1.0.0
 8 verbose lifecycle mean-lineman@1.0.0~server: unsafe-perm in lifecycle true
-9 verbose lifecycle mean-lineman@1.0.0~server: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/stephane/Bureau/hackathon-03/node_modules/.bin:/home/stephane/.rvm/gems/ruby-2.4.0/bin:/home/stephane/.rvm/gems/ruby-2.4.0@global/bin:/home/stephane/.rvm/rubies/ruby-2.4.0/bin:/usr/binRobomongo/bin:/home/stephane/bin:/home/stephane/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/stephane/.rvm/bin:/home/stephane/.rvm/bin
-10 verbose lifecycle mean-lineman@1.0.0~server: CWD: /home/stephane/Bureau/hackathon-03
+9 verbose lifecycle mean-lineman@1.0.0~server: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/cendrinebuisson/Documents/00__wcs/hackatons/hackathon-03B/hackathon-03/node_modules/.bin:/Users/cendrinebuisson/.rvm/gems/ruby-2.4.0/bin:/Users/cendrinebuisson/.rvm/gems/ruby-2.4.0@global/bin:/Users/cendrinebuisson/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/cendrinebuisson/.rvm/bin
+10 verbose lifecycle mean-lineman@1.0.0~server: CWD: /Users/cendrinebuisson/Documents/00__wcs/hackatons/hackathon-03B/hackathon-03
 11 silly lifecycle mean-lineman@1.0.0~server: Args: [ '-c', 'cd server && babel-node index.js' ]
 12 silly lifecycle mean-lineman@1.0.0~server: Returned: code: 1  signal: null
 13 info lifecycle mean-lineman@1.0.0~server: Failed to exec server script
 14 verbose stack Error: mean-lineman@1.0.0 server: `cd server && babel-node index.js`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at EventEmitter.emit (events.js:194:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:886:16)
+14 verbose stack     at ChildProcess.emit (events.js:194:7)
+14 verbose stack     at maybeClose (internal/child_process.js:899:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid mean-lineman@1.0.0
-16 verbose cwd /home/stephane/Bureau/hackathon-03
-17 error Linux 4.8.0-53-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "server"
-19 error node v6.10.3
-20 error npm  v3.10.10
+16 verbose cwd /Users/cendrinebuisson/Documents/00__wcs/hackatons/hackathon-03B/hackathon-03
+17 error Darwin 16.6.0
+18 error argv "/usr/local/Cellar/node/7.7.2/bin/node" "/usr/local/bin/npm" "run" "server"
+19 error node v7.7.2
+20 error npm  v4.1.2
 21 error code ELIFECYCLE
 22 error mean-lineman@1.0.0 server: `cd server && babel-node index.js`
 22 error Exit status 1

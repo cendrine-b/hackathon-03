@@ -1,138 +1,159 @@
 <div class="row register-page">
-    <div class="col-md-6 col-xs-12 form-content">
+  <!-- ui-view="header" autoscroll="true" -->
+  <div class="col-md-offset-3 col-md-6 col-xs-12 form-content">
 
-        <form class="form" name="registerForm" novalidate ng-submit="register()">
-            <h1>Inscription</h1>
-            <div ng-repeat="error in errors">{{error.error}}</div>
+    <form class="form" name="registerForm" novalidate ng-submit="register()">
+      <h2>Inscription</h2>
 
-            <div class="form-group">
-                <label>Nom</label>
-                <input id="nom" type="text" class="form-control" required placeholder="Votre nom">
-            </div>
-            <div class="form-group">
-                <label>Prénom</label>
-                <input id="prénom" type="text" class="form-control" required placeholder="Votre prénom">
-            </div>
-            <div class="form-group">
-                <label>Adresse e-mail</label>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
-            </div>
-            <div class="form-group">
-                <label>Mot de passe</label>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Définissez un mot de passe">
-            </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input id="nom" type="text" class="form-control" ng-model="user.firstname" required placeholder="Votre nom">
+      </div>
+      <div class="form-group">
+        <label>Prénom</label>
+        <input id="prénom" type="text" class="form-control" ng-model="user.lastname" required placeholder="Votre prénom">
+      </div>
+      <div class="form-group">
+        <label>Photographie</label>
+        <input type="file" class="form-control-file" ng-model="user.me.photo" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">Choisissez votre plus belle photo.</small>
+      </div>
+      <div class="form-group">
+        <label>Adresse e-mail</label>
+        <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Votre adresse e-mail">
+      </div>
+      <div class="form-group">
+        <label>Mot de passe</label>
+        <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Définissez un mot de passe">
+      </div>
 
-            <p>Merci de compléter les informations suivantes :</p>
+      <hr />
 
-            <div class="form-group">
-                <label>Etes-vous :</label>
-                <select class="form-control">
-                    <option>Un homme</option>
-                    <option>Une femme</option>
-                    <option>Neutre</option>
-            </select>
-            </div>
+      <h2>Vous</h2>
 
-            <div class="form-group">
-                <label>Etes-vous :</label>
-                <select class="form-control">
-                    <option>Un Humain</option>
-                    <option>Un Robot</option>
-                    <option>Un cyborg</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Quel est votre genre ?</label>
+        <select class="form-control" ng-model="user.me.gender">
+          <option>Homme</option>
+          <option>Femme</option>
+          <option>Neutre</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Dans la vie, êtes-vous :</label>
-                <select class="form-control">
-                    <option>Un Aventurier</option>
-                    <option>Un Romantique</option>
-                    <option>Un Séducteur</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Je suis un :</label>
+        <select class="form-control" ng-model="user.me.species">
+          <option>Humain</option>
+          <option>Robot</option>
+          <option>Cyborg</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Actuellement, recherchez-vous :</label>
-                <select class="form-control">
-                    <option>Un Homme</option>
-                    <option>Un femme</option>
-                    <option>Neutre</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Vous êtes plutôt :</label>
+        <select class="form-control" ng-model="user.me.personality">
+          <option>Aventurier</option>
+          <option>Romantique</option>
+          <option>Séducteur</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Quel modèle de Hu-Bot recherchez-vous :</label>
-                <select class="form-control">
-                    <option>Le modèle Sidereal</option>
-                    <option>Le modèle Deus</option>
-                    <option>Le modèle Beauty</option>
-                    <option>Le modèle Custom</option>
-            </select>
-            </div>
+      <hr />
 
-            <div class="form-group">
-                <label>Quelle couleur des yeux pour votre Hu-Bot :</label>
-                <select class="form-control">
-                    <option>Violet</option>
-                    <option>Bleue</option>
-                    <option>Vert</option>
-                    <option>Noir</option>
-            </select>
-            </div>
+      <h2>Votre hu-bot</h2>
 
-            <div class="form-group">
-                <label>Quelle couleur des cheveux pour votre Hu-Bot :</label>
-                <select class="form-control">
-                    <option>Noir</option>
-                    <option>Blond</option>
-                    <option>Brun</option>
-                    <option>Châtain</option>
-            </select>
-            </div>
+      <h3 class="body">Corps…</h3>
 
-            <div class="form-group">
-                <label>Quel type de caractère cherchez-vous pour votre Hu-Bot :</label>
-                <select class="form-control">
-                    <option>Aventurier</option>
-                    <option>Romantique</option>
-                    <option>Séducteur</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Actuellement, qui recherchez-vous ?</label>
+        <select class="form-control" ng-model="user.searching.gender">
+          <option>Homme</option>
+          <option>Femme</option>
+          <option>Neutre</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Quelle qualité cherchez-vous pour votre Hu-Bot :</label>
-                <select class="form-control">
-                    <option>Mystérieux</option>
-                    <option>Rêveur</option>
-                    <option>Indépendant</option>
-                    <option>Joueur</option>
-                    <option>Extraverti</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Quel sera le modèle de votre hu-bot ?</label>
+        <select class="form-control" ng-model="user.searching.product">
+          <option>Sidereal</option>
+          <option>Deus</option>
+          <option>Beauty</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Quel défaut cherchez-vous pour votre Hu-Bot :</label>
-                <select class="form-control">
-                    <option>Silencieux</option>
-                    <option>Impulsif</option>
-                    <option>Jaloux</option>
-                    <option>Bavard</option>
-                    <option>Introverti</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Quelle est la couleur de ses yeux ?</label>
+        <select class="form-control" ng-model="user.searching.eyes">
+          <option>Violet</option>
+          <option>Bleu</option>
+          <option>Vert</option>
+          <option>Noir</option>
+        </select>
+      </div>
 
-            <div class="form-group">
-                <label>Quelle est la valeur de votre désir :</label>
-                <select class="form-control">
-                    <option>Entre 3 000 € et 4 000 €</option>
-                    <option>Entre 4 000 € et 5 000 €</option>
-                    <option>Entre 5 000 € et 7 000 €</option>
-            </select>
-            </div>
+      <div class="form-group">
+        <label>Quelle est la couleur de ses cheveux ?</label>
+        <select class="form-control" ng-model="user.searching.hair">
+          <option>Noir</option>
+          <option>Blond</option>
+          <option>Brun</option>
+          <option>Châtain</option>
+        </select>
+      </div>
 
-            <button type="submit" class="btn btn-primary btn-block">Je m'inscris</button>
-            <small class="form-text text-muted">Nous ne transmettrons jamais vos informations personnelles à des tiers ou des robots.</small>
-        </form>
+      <h3 class="soul">…& âme</h3>
 
-    </div>
+      <div class="form-group">
+        <label>Quel est son caractère ?</label>
+        <select class="form-control" ng-model="user.searching.personality">
+          <option>Aventurier</option>
+          <option>Romantique</option>
+          <option>Séducteur</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Quelle est sa principale qualité ?</label>
+        <select class="form-control" ng-model="user.searching.quality">
+          <option>Mystérieux</option>
+          <option>Rêveur</option>
+          <option>Indépendant</option>
+          <option>Joueur</option>
+          <option>Extraverti</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Quel est son principal défaut ?</label>
+        <select class="form-control" ng-model="user.searching.fault">
+          <option>Silencieux</option>
+          <option>Impulsif</option>
+          <option>Jaloux</option>
+          <option>Bavard</option>
+          <option>Introverti</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>À quelle valeur s'élève votre désir ?</label>
+        <select class="form-control" ng-model="user.searching.price">
+          <option>Entre 3 000 € et 4 000 €</option>
+          <option>Entre 4 000 € et 5 000 €</option>
+          <option>Entre 5 000 € et 7 000 €</option>
+        </select>
+      </div>
+
+      <div ng-repeat="error in errors">{{error.error}}</div>
+
+      <button class="col-md-4 col-xs-12 btn btn-primary btn-lg custom-btn"><h4>Customize</h4></button>
+      <input type="submit" placeholder="Valider" class="col-md-offset-5 col-md-3 col-xs-12 btn btn-primary btn-lg register-btn">
+      <div class="row">
+        <small class="col-xs-12 form-text text-muted">Nous ne transmettrons jamais vos informations personnelles à des tiers ou des robots.</small>
+      </div>
+
+    </form>
+
+
+  </div>
 </div>
