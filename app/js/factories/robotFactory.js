@@ -11,6 +11,7 @@ angular.module('app')
         personality: "Séducteur",
         quality: "Mystérieux",
         fault: "Jaloux",
+        price: "4 300 €",
       },
       {
         name: "Alix",
@@ -21,6 +22,7 @@ angular.module('app')
         personality: "Romantique",
         quality: "Rêveur",
         fault: "Silencieux",
+        price: "3 700 €",
       },
       {
         name: "Calia",
@@ -31,6 +33,7 @@ angular.module('app')
         personality: "Séducteur",
         quality: "Indépendant",
         fault: "Bavard",
+        price: "3 700 €",
       },
       {
         name: "Ripley",
@@ -41,6 +44,7 @@ angular.module('app')
         personality: "Romantique",
         quality: "Mystérieux",
         fault: "Silencieux",
+        price: "6 040 €",
       },
       {
         name: "Ryo",
@@ -51,6 +55,7 @@ angular.module('app')
         personality: "Aventurier",
         quality: "Joueur",
         fault: "Impulsif",
+        price: "6 040 €",
       },
       {
         name: "Rebecca",
@@ -61,6 +66,7 @@ angular.module('app')
         personality: "Aventurier",
         quality: "Indépendant",
         fault: "Introverti",
+        price: "4 300 €",
       },
       {
         name: "Anto",
@@ -71,6 +77,7 @@ angular.module('app')
         personality: "Aventurier",
         quality: "Joueur",
         fault: "Jaloux",
+        price: "4 300 €",
       },
       {
         name: "Khor",
@@ -81,6 +88,7 @@ angular.module('app')
         personality: "Séducteur",
         quality: "Extraverti",
         fault: "Impulsif",
+        price: "3 700 €",
       },
       {
         name: "Liar",
@@ -91,6 +99,7 @@ angular.module('app')
         personality: "Romantique",
         quality: "Mystérieux",
         fault: "Jaloux",
+        price: "3 700 €",
       },
       {
         name: "Arwel",
@@ -101,6 +110,7 @@ angular.module('app')
         personality: "Aventurier",
         quality: "Extraverti",
         fault: "Impulsif",
+        price: "3 700 €",
       },
       {
         name: "Stella",
@@ -111,6 +121,7 @@ angular.module('app')
         personality: "Séducteur",
         quality: "Rêveur",
         fault: "Introverti",
+        price: "3 700 €",
       },
       {
         name: "Alia",
@@ -121,6 +132,7 @@ angular.module('app')
         personality: "Séductrice",
         quality: "Mystérieux",
         fault: "Silencieux",
+        price: "6 040 €",
       },
     ];
       return robots;
