@@ -15,15 +15,14 @@ angular.module('app')
 
 
     // MODAL CHAT
-    $scope.chats = [];
-    $scope.query = "";
-
-    $scope.addChat = function () {
-      var value = $scope.query;
-      $scope.chats.push(value);
-      $scope.query = '';
-    };
-
-    console.log($scope.chats);
+    // $scope.chats = [];
+    // $scope.query = "";
+    //
+    // $scope.addChat = function () {
+    //   $scope.chats.push($scope.query);
+    //   $scope.query = '';
+    // };
+    //
+    // console.log($scope.chats);
 
   });

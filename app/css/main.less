@@ -61,6 +61,16 @@ p {
   font-weight: 400;
 }
 
+button {
+  outline: none !important;
+}
+
+button:active,
+button:focus,
+button:hover {
+  outline: none !important;
+}
+
 /* /////////////////////////////// NAVBAR /////////////////////////////// */
 .navbar.navbar-default {
   border: none;
@@ -119,9 +129,15 @@ p {
   align-items: center;
 }
 
-// .baseline {
-//   background-color: @main-color;
-// }
+.baseline {
+  background: url("../img/pale_4.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.suggest-register {
+  background: url("../img/man-pale.jpg") no-repeat center center;
+  background-size: cover;
+}
 
 .products {
   background: url("../img/eyes.jpg") fixed no-repeat center center;
@@ -134,34 +150,38 @@ p {
 .suggest-register button {
   margin-top: 2rem;
   color: @dark-color;
-  background-color: white;
+  background-color: transparent;
   border: none;
   border-bottom: solid 0.2rem @dark-color;
   border-radius: 0;
   box-shadow: none;
+  outline: none !important;
 }
 
 .suggest-register button:active,
 .suggest-register button:focus,
 .suggest-register button:hover {
   color: @second-color;
-  background-color: white;
+  background-color: transparent;
   border-bottom: solid 0.2rem @second-color;
+  outline: none !important;
 }
 
 footer {
-  background-color: @main-color;
+  background-color: white;
 }
 
 .footer-content {
-  min-height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.2rem;
 }
 
 .legal p {
   font-size: 0.8rem;
+  color: @dark-color;
+  margin-top: 0.5rem;
 }
 
 .social i {
@@ -394,6 +414,7 @@ hr {
 .robot-buy:active,
 .robot-buy:focus,
 .robot-buy:hover {
+  color: white;
   background-color: @second-color;
   border: solid 0.2rem @second-color;
 }
@@ -404,21 +425,118 @@ hr {
 
 // CHAT ROBOT
 
-#white {
-  background-color: @second-color;
-  color: white;
-  height: 10rem;
-  overflow-y: scroll;
+#open-chat h2 {
+  margin: 2rem 0;
 }
 
-#chatarea {
+#open-chat h4 {
+  margin: 0 0 1.6rem;
+}
+
+.message {
+  margin-bottom: 1.8rem;
+}
+
+.enter-text {
+  margin: 0 0 1.6rem;
+}
+
+.enter-text button {
+  color: white;
+  text-shadow: none;
+  background-color: @dark-color;
+  border: solid 0.2rem @dark-color;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none !important;
+}
+
+.enter-text button:active,
+.enter-text button:focus,
+.enter-text button:hover {
+  color: white;
+  background-color: @second-color;
+  border: solid 0.2rem @second-color;
+}
+
+.ryo {
+  background-color: @main-color;
+}
+
+.ryo p {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.list-m {
+  display: none;
+  text-align: left;
+}
+
+.list-m button {
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: solid 0.2rem transparent;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  outline: none !important;
+}
+
+.list-m button:active,
+.list-m button:focus,
+.list-m button:hover {
+  color: transparent;
+  background-color: transparent;
+  border: solid 0.2rem transparent;
+  cursor: default;
+  outline: none !important;
+}
+
+.css-class-add, .css-class-remove {
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.css-class,
+.css-class-add.css-class-add-active {
+  display: block;
   color: black;
 }
 
-.blue {
-  color: blue;
+.css-class-remove.css-class-remove-active {
+  color: white;
 }
 
-.red {
-  color: red;
+// BUY
+
+.command {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.robot-content-buy h2 {
+  margin: 0 0 1rem;
+}
+
+.robot-content-buy h4 {
+  margin: 0 0 1.2rem;
+}
+
+.buy-btn {
+  margin-top: 1rem;
+  color: white;
+  background-color: @dark-color;
+  border: solid 0.2rem @dark-color;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.buy-btn:active,
+.buy-btn:focus,
+.buy-btn:hover {
+  background-color: @second-color;
+  border: solid 0.2rem @second-color;
 }

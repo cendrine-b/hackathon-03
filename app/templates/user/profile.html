@@ -69,15 +69,80 @@
           </button>
           <h2>Espace de discussion</h2>
           <h4>Vous l'avez désiré & choisi, discutez avec votre hu-bot.</h4>
-          <form class="col-md-offset-2 col-md-8 col-xs-12 form-group">
-            <input class="form-control text" ng-model="query"/>
+          <form class="col-xs-12 form-group enter-text">
+            <div class="col-md-offset-2 col-md-6 col-xs-12">
+              <input class="form-control message" placeholder="Engagez la conversation" />
+            </div>
+            <div class="col-md-2 col-xs-12">
+              <button class="btn btn-default" ng-click="myCssVar='css-class'">Valider</button>
+            </div>
+            <div class="col-md-offset-2 col-md-8 col-xs-12 list-m" ng-class="myCssVar">
+              <p><strong>{{ user.lastname }} :</strong> Bonjour Ryo
+                <button class="btn btn-default" ng-click="cssVar='css-class'"></button>
+              </p>
+            </div>
+            <div class="col-md-offset-2 col-md-8 col-xs-12 list-m ryo" ng-class="cssVar">
+              <p><strong>Ryo :</strong> Bonjour {{ user.lastname }}. Comment vas-tu ?</p>
+            </div>
+            <!-- <ul class="col-md-offset-2 col-md-8 col-xs-12 list-messages" ng-class="myCssVar">
+              <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Bonjour Ryo
+                <button type="button" name="button" ng-click="cssVar='css-class'"></button>
+              </li>
+              <li class="list-group-item ryo" ng-class="cssVar">
+                <strong>Ryo :</strong> Bonjour {{ user.lastname }}. Comment vas-tu ?
+              </li> -->
+
+            <!-- <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Très bien, merci. Dis-moi, quel est ton rêve ?
+              </li>
+              <li class="list-group-item ryo">
+                <strong>Ryo :</strong> Prendre la route planétaire ARN et faire le voyage jusqu'à Saturne sans utiliser les services de transports interstellaire.
+              </li>
+              <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Alors je crois que nous irons ensemble.
+              </li> -->
+
+            <!-- </ul> -->
+          </form>
+
+
+          <!-- <form class="col-xs-12 form-group enter-text">
+            <div class="col-md-offset-2 col-md-6 col-xs-12">
+              <input class="form-control" placeholder="Engagez la conversation"/>
+            </div>
+            <div class="col-md-2 col-xs-12">
+              <button class="btn btn-default" ng-hide="alertShow==1" ng-click="alertShow = 1">Valider</button>
+              <button class="btn btn-default" ng-hide="alertShow==2" ng-click="alertShow = 2">Valider</button>
+              <button class="btn btn-default" ng-hide="alertShow==3" ng-click="alertShow = 3">Valider</button>
+            </div>
+          </form>
+          <ul class="col-md-offset-2 col-md-8 col-xs-12">
+            <li class="list-group-item user" ng-show="alertShow==1">
+              <strong>{{ user.lastname }} :</strong> Bonjour Ryo
+            </li>
+            <li class="list-group-item ryo" ng-show="alertShow==1">
+              <strong>Ryo :</strong> Bonjour {{ user.lastname }}. Comment vas-tu ?
+            </li>
+            <li class="list-group-item user" ng-show="alertShow==2">
+              <strong>{{ user.lastname }} :</strong> Très bien, merci. Dis-moi, quel est ton rêve ?
+            </li>
+            <li class="list-group-item ryo" ng-show="alertShow==2">
+              <strong>Ryo :</strong> Prendre la route planétaire ARN et faire le voyage jusqu'à Saturne sans utiliser les services de transports interstellaire.
+            </li>
+            <li class="list-group-item user" ng-show="alertShow==3">
+              <strong>{{ user.lastname }} :</strong> Alors je crois que nous irons ensemble.
+            </li>
+          </ul> -->
+          <!-- <form class="col-md-offset-2 col-md-8 col-xs-12 form-group">
+            <input class="form-control" ng-model="query" placeholder="Engagez la conversation"/>
             <button class="btn btn-default" ng-click="addChat()">Valider</button>
           </form>
           <ul class="col-md-offset-2 col-md-8 col-xs-12 list-group">
-            <li class="list-group-item" ng-repeat="chat in chats">
-              <strong>{{ user.lastname }} :</strong> {{ chat.value }}
+            <li class="list-group-item" ng-repeat="chat in chats track by $index">
+              <strong>{{ user.lastname }} :</strong> {{ chat }}
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>
@@ -87,8 +152,48 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h2>Retrouvez votre hu-bot</h2>
-          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="col-xs-12">Retrouvez votre hu-bot</h2>
+          <h4 class="col-xs-12">Séduit, vous retrouverez votre hu-bot dans un délai de 48 heures.</h4>
+          <div class="col-md-offset-2 col-md-8 col-xs-12 command">
+            <form class="col-xs-12 form-group">
+              <div class="form-group row">
+                <label for="example-tel-input" class="form-label">Adresse du téléport</label>
+                <input class="form-control" type="tel" value="" id="example-tel-input" required placeholder="3284.0011.SATURNE">
+              </div>
+              <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Date de livraison</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" id="example-date-input">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">Numéro de carte bancaire</label>
+                <div class="col-10">
+                  <input class="form-control" type="number" value="(16 chiffres)" id="example-number-input" required placeholder="6574 4587 9877 6453">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-number-input" class="col-2 col-form-label">Cryptogramme</label>
+                <div class="col-10">
+                  <input class="form-control" type="number" value="" id="example-number-input" required placeholder="645 (au dos de votre carte)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="example-date-input" class="col-2 col-form-label">Date d'expiration de la carte</label>
+                <div class="col-10">
+                  <input class="form-control" type="date" value="" id="example-date-input">
+                </div>
+              </div>
+              <input type="submit" placeholder="Valider" class="col-md-offset-9 col-md-3 col-xs-12 btn btn-primary btn-lg buy-btn">
+              <div class="row">
+                <small class="col-md-offset-1 col-md-10 col-xs-12 form-text text-muted">Nous ne transmettrons jamais vos informations personnelles à des tiers ou des robots.</small>
+              </div>
+            </form>
+          </div>
+
         </div>
       </div>
     </div>
