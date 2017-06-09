@@ -119,9 +119,15 @@ p {
   align-items: center;
 }
 
-// .baseline {
-//   background-color: @main-color;
-// }
+.baseline {
+  background: url("../img/pale_4.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.suggest-register {
+  background: url("../img/man-pale.jpg") no-repeat center center;
+  background-size: cover;
+}
 
 .products {
   background: url("../img/eyes.jpg") fixed no-repeat center center;
@@ -134,7 +140,7 @@ p {
 .suggest-register button {
   margin-top: 2rem;
   color: @dark-color;
-  background-color: white;
+  background-color: transparent;
   border: none;
   border-bottom: solid 0.2rem @dark-color;
   border-radius: 0;
@@ -145,23 +151,25 @@ p {
 .suggest-register button:focus,
 .suggest-register button:hover {
   color: @second-color;
-  background-color: white;
+  background-color: transparent;
   border-bottom: solid 0.2rem @second-color;
 }
 
 footer {
-  background-color: @main-color;
+  background-color: white;
 }
 
 .footer-content {
-  min-height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.2rem;
 }
 
 .legal p {
   font-size: 0.8rem;
+  color: @dark-color;
+  margin-top: 0.5rem;
 }
 
 .social i {
