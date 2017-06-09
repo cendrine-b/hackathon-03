@@ -402,6 +402,7 @@ hr {
 .robot-buy:active,
 .robot-buy:focus,
 .robot-buy:hover {
+  color: white;
   background-color: @second-color;
   border: solid 0.2rem @second-color;
 }
@@ -412,21 +413,40 @@ hr {
 
 // CHAT ROBOT
 
-#white {
-  background-color: @second-color;
+#open-chat h2 {
+  margin: 2rem 0;
+}
+
+#open-chat h4 {
+  margin: 0 0 1.6rem;
+}
+
+.enter-text {
+  margin: 0 0 1.6rem;
+}
+
+.enter-text button {
   color: white;
-  height: 10rem;
-  overflow-y: scroll;
+  text-shadow: none;
+  background-color: @dark-color;
+  border: solid 0.2rem @dark-color;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-#chatarea {
-  color: black;
+.enter-text button:active,
+.enter-text button:focus,
+.enter-text button:hover {
+  color: white;
+  background-color: @second-color;
+  border: solid 0.2rem @second-color;
 }
 
-.blue {
-  color: blue;
+.user,
+.ryo {
+  text-align: left;
 }
 
-.red {
-  color: red;
+.ryo {
+  background-color: @main-color;
 }
