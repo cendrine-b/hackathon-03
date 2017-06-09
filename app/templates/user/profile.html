@@ -71,6 +71,44 @@
           <h4>Vous l'avez désiré & choisi, discutez avec votre hu-bot.</h4>
           <form class="col-xs-12 form-group enter-text">
             <div class="col-md-offset-2 col-md-6 col-xs-12">
+              <input class="form-control message" placeholder="Engagez la conversation"/>
+            </div>
+            <div class="col-md-2 col-xs-12">
+              <button class="btn btn-default" ng-click="myCssVar='css-class'">Valider</button>
+            </div>
+            <div class="col-md-offset-2 col-md-8 col-xs-12 list-m" ng-class="myCssVar">
+              <p><strong>{{ user.lastname }} :</strong> Bonjour Ryo
+                <button class="btn btn-default" ng-click="cssVar='css-class'"></button>
+              </p>
+            </div>
+            <div class="col-md-offset-2 col-md-8 col-xs-12 list-m ryo" ng-class="cssVar">
+              <p><strong>Ryo :</strong> Bonjour {{ user.lastname }}. Comment vas-tu ?</p>
+            </div>
+            <!-- <ul class="col-md-offset-2 col-md-8 col-xs-12 list-messages" ng-class="myCssVar">
+              <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Bonjour Ryo
+                <button type="button" name="button" ng-click="cssVar='css-class'"></button>
+              </li>
+              <li class="list-group-item ryo" ng-class="cssVar">
+                <strong>Ryo :</strong> Bonjour {{ user.lastname }}. Comment vas-tu ?
+              </li> -->
+
+              <!-- <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Très bien, merci. Dis-moi, quel est ton rêve ?
+              </li>
+              <li class="list-group-item ryo">
+                <strong>Ryo :</strong> Prendre la route planétaire ARN et faire le voyage jusqu'à Saturne sans utiliser les services de transports interstellaire.
+              </li>
+              <li class="list-group-item user">
+                <strong>{{ user.lastname }} :</strong> Alors je crois que nous irons ensemble.
+              </li> -->
+
+            <!-- </ul> -->
+          </form>
+
+
+          <!-- <form class="col-xs-12 form-group enter-text">
+            <div class="col-md-offset-2 col-md-6 col-xs-12">
               <input class="form-control" placeholder="Engagez la conversation"/>
             </div>
             <div class="col-md-2 col-xs-12">
@@ -95,7 +133,7 @@
             <li class="list-group-item user" ng-show="alertShow==3">
               <strong>{{ user.lastname }} :</strong> Alors je crois que nous irons ensemble.
             </li>
-          </ul>
+          </ul> -->
           <!-- <form class="col-md-offset-2 col-md-8 col-xs-12 form-group">
             <input class="form-control" ng-model="query" placeholder="Engagez la conversation"/>
             <button class="btn btn-default" ng-click="addChat()">Valider</button>

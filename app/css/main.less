@@ -145,6 +145,7 @@ p {
   border-bottom: solid 0.2rem @dark-color;
   border-radius: 0;
   box-shadow: none;
+  outline: none !important;
 }
 
 .suggest-register button:active,
@@ -421,6 +422,10 @@ hr {
   margin: 0 0 1.6rem;
 }
 
+.message {
+  margin-bottom: 1.8rem;
+}
+
 .enter-text {
   margin: 0 0 1.6rem;
 }
@@ -432,6 +437,7 @@ hr {
   border: solid 0.2rem @dark-color;
   border-radius: 0;
   box-shadow: none;
+  outline: none !important;
 }
 
 .enter-text button:active,
@@ -442,11 +448,53 @@ hr {
   border: solid 0.2rem @second-color;
 }
 
-.user,
 .ryo {
+  background-color: @main-color;
+}
+
+.ryo p {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.list-m {
+  display: none;
   text-align: left;
 }
 
-.ryo {
-  background-color: @main-color;
+.list-m button {
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: solid 0.2rem transparent;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  outline: none !important;
+}
+
+.list-m button:active,
+.list-m button:focus,
+.list-m button:hover {
+  color: transparent;
+  background-color: transparent;
+  border: solid 0.2rem transparent;
+  cursor: default;
+  outline: none !important;
+}
+
+.css-class-add, .css-class-remove {
+  transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.css-class,
+.css-class-add.css-class-add-active {
+  display: block;
+  color: black;
+}
+
+.css-class-remove.css-class-remove-active {
+  color: white;
 }
