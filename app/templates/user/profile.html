@@ -74,9 +74,9 @@
               <input class="form-control" placeholder="Engagez la conversation"/>
             </div>
             <div class="col-md-2 col-xs-12">
-              <button class="btn btn-default" ng-click="alertShow =1">Valider</button>
-              <button class="btn btn-default" ng-click="alertShow = 1 & alertShow = 2">Valider</button>
-              <button class="btn btn-default" ng-click="alertShow =3">Valider</button>
+              <button class="btn btn-default" ng-hide="alertShow==1" ng-click="alertShow = 1">Valider</button>
+              <button class="btn btn-default" ng-hide="alertShow==2" ng-click="alertShow = 2">Valider</button>
+              <button class="btn btn-default" ng-hide="alertShow==3" ng-click="alertShow = 3">Valider</button>
             </div>
           </form>
           <ul class="col-md-offset-2 col-md-8 col-xs-12">
