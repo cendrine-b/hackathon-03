@@ -87,79 +87,68 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          
           <h2>Retrouvez votre hu-bot</h2>
-          <!--<div ng-message="required">Champ requis</div>
-          <div ng-message="minlength">Valeur trop courte</div>
-          <div ng-messages="maxlength">Valeur trop longue</div>
-          <div ng-message="email">E-mail non valide</div>
-          <div ng-message="number">Caractères alphabétiques non autorisés</div
-          >-->
-    <form name="myForm" ng-submit="foo()" novalidate>
 
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-
-      <label>Prénom : </label>
-      <input name="prenom" type="text" required ng-minlength="2" ng-maxlength="20" />
-      <div ng-messages="myForm.prenom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Nom : </label>
-      <input name="nom" type="text" ng-maxlength="30" />
-      <div ng-messages="myForm.nom.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>E-mail : </label>
-      <input name="mail" type="email" required />
-      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Adresse de livraison : </label>
-      <input name="adresse" type="text" required ng-minlength="2" ng-maxlength="50" />
-      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Code postal : </label>
-      <input name="code postal" type="number" required />
-      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Téléphone : </label>
-      <input name="telephone" type="number" required />
-      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Nom carte bancaire : </label>
-      <input name="carte bancaire" type="text" required ng-minlength="2" ng-maxlength="50" />
-      <div ng-messages="myForm.mail.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>N° de carte bancaire (16 chiffres) : </label>
-      <input name="numero cb" type="number" required />
-      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Cryptogramme (3 derniers chiffres au dos de la carte) : </label>
-      <input name="cryptogramme" type="number" required />
-      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <label>Date de validité : </label>
-      <input name="date validité" type="number" required />
-      <div ng-messages="myForm.age.$error" ng-messages-include="erreurs.html" ng-if="myForm.$submitted"></div>
-
-      <div class="container">
-          <div class="row">
-              <div class='col-sm-6'>
-                <p>Date de livraison</p>
-                  <div class="form-group">
-                      <div class='input-group date' id='datetimepicker1'>
-                          <input type='text' class="form-control" />
-                          <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                          </span>
-                      </div>
-                  </div>
-              </div>
-              <script type="text/javascript">
-                  $(function () {
-                      $('#datetimepicker1').datetimepicker();
-                  });
-              </script>
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Adresse de livraison</label>
+            <div class="col-10">
+              <input class="form-control" type="text" value="" id="example-text-input" required placeholder="1032 place de la Terre">
+            </div>
           </div>
-      </div>
+
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Code postal</label>
+            <div class="col-10">
+              <input class="form-control" type="text" value="" id="example-text-input" required placeholder="12A7B95 Province de Pandoora">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Planète</label>
+            <div class="col-10">
+              <input class="form-control" type="text" value="" id="example-text-input" required placeholder="Planète Huldor">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-tel-input" class="col-2 col-form-label">Téléphone</label>
+            <div class="col-10">
+              <input class="form-control" type="tel" value="" id="example-tel-input" required placeholder="3284.5478.3654">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-date-input" class="col-2 col-form-label">Date de livraison</label>
+            <div class="col-10">
+              <input class="form-control" type="date" value="" id="example-date-input">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-number-input" class="col-2 col-form-label">N° de carte bancaire</label>
+            <div class="col-10">
+              <input class="form-control" type="number" value="(16 chiffres)" id="example-number-input" required placeholder="6574 4587 9877 6453">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-number-input" class="col-2 col-form-label">Cryptogramme</label>
+            <div class="col-10">
+              <input class="form-control" type="number" value="(3 derniers chiffres au dos de la carte)" id="example-number-input" required placeholder="645 (au dos de la carte)">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="example-date-input" class="col-2 col-form-label">Date d'expiration de la carte</label>
+            <div class="col-10">
+              <input class="form-control" type="date" value="" id="example-date-input">
+            </div>
+          </div>
 
       <input type="submit" value="Valider" />
     </form>
